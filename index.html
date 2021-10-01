@@ -2,71 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đuổi hình bắt chữ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        body {
-            background-image: url('https://tansonnhatairport.vn/wp-content/uploads/2017/11/anh-dong-1.gif');
-            background-size: 50% 50% ;
-            font-family: 'Open Sans', sans-serif;
-            color: indigo;
-            /*margin: 80px;*/
-        }
-        button {
-            border: none;            /* viền button */
-            border-radius:15px;
-            font-size: 12px;
+    <title>Title</title>
+</head>
+
+<style>
+
+    body {
+        background-image: url("https://i.pinimg.com/originals/50/20/af/5020af9c53936ac7596855bc9bc3733b.gif");
+        text-align: center;
+        background-size: 100%;
+        color: white;
 
 
-        }
-        div {
-            text-align:center;
-        }
-        p {
-            text-align:justify;
-        }
-    </style>
+    }
+    button {
+        border: none;
+        border-radius: 15px;
+        padding: 10px 10px;
+        background-color: #008CBA;
+        font-size:200px;
 
+
+    }
+    p {
+        text-align: center;
+        color: indigo;
+    }
+</style>
 <body>
-<audio controls autoplay src="intro.mp3">
-</audio>
-<br><br>
-
-<label><input id="input1" placeholder="Name" size="40px"></label>
-<br><br>
-
-<button id="but1" onclick="setName()" style="background-color: #4CAF50;
- padding: 10px 10px">Submit</button>
-<h2 id="tên"></h2>
-<h3 id="điểm">Score</h3>
-<h3>Hướng dẫn chơi: </h3>
-<p>Xem hình ảnh rồi đoán xem đó là gì</p>
-<p>Viết câu trả lời vào ô dưới</p>
-<p>Ấn vào ô CHECK để kiểm tra</p>
-<p>Ấn vào ô TIPS để hiển thị gợi ý</p>
-<p>Ấn vào NEXT để chuyển sang câu tiếp theo</p>
+<button ><a style="text-decoration: white; color: white" href="duoihinhbatchu2.html">Bắt đầu</a></button>
 
 <div>
-    <button id="but2" class="button button1"
-            style="color: white;
-            font-size: 30px;background-color: #008CBA;
-            padding: 50px 50px"
-            onclick="startGame()">START
-    </button>
-</div>
-<div>
-    <br><br><br><br> <br> <br><br>
-    <label><input id="input2" placeholder="Answer here" size="40px"></label>
-    <button id="but3" style="background-color: #4CAF50; padding: 10px 10px">Check</button>
-    <button id="but4" style="background-color: yellow; padding: 10px 10px">Tips</button>
-    <button id="but5" style="background-color: #b20e0e; padding: 10px 10px"> Next </button>
-</div>
-<h3><a style="text-decoration: none "href="https://www.facebook.com/khanhgaquay/">V1.0.0.1 create by Khánh</a></h3>
+    <h3 style="color: indigo">Hướng dẫn chơi: </h3>
+    <p>Xem hình ảnh rồi đoán xem đó là gì</p>
+    <p>Viết câu trả lời vào ô dưới</p>
+    <p>Ấn vào ô Kiểm tra để xem đúng hay sai</p>
+    <p>Ấn vào ô Gợi ý để hiển thị gợi ý</p>
+    <p>Ấn vào Đổi câu hỏi để chuyển sang câu khác</p>
 
-<script src="Game.js"></script>
-<script src="Player.js"></script>
-<script src="Question.js"></script>
-
+</div>
 </body>
 </html>
