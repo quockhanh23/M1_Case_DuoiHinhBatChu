@@ -24,6 +24,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            border-radius: 15px;
         }
 
 
@@ -33,16 +34,15 @@
 <body>
 <h2 id="time"></h2>
 <audio id="audio" style="display: none" onmouseover="audio()" controls autoplay src="intro.mp3 "></audio>
-<audio id="audio1" src="win.wav" style="display: none"></audio>
-<audio id="audio2" src="lose.wav" style="display: none"></audio>
+<audio id="audio1" src="win2.mp3" style="display: none"></audio>
+<audio id="audio2" src="lose.mp3" style="display: none"></audio>
 
 <img src="anh1.jpg" id="anh1" style="text-align: center" alt="" width="400px" height="400px">
 
     <label><input type="text" id="nhập" placeholder="Answer here" onfocus="this.value=''"></label>
     <button id="but2"
             style="color: white;
-        font-size:30px;background-color: indigo;" onclick="check()">Kiểm tra
-    </button>
+        background-color: indigo;" onclick="check()">Kiểm tra</button>
 
     <button id="but4" onclick="tips()" style="background-color: yellow;">Gợi ý</button>
 
@@ -60,8 +60,8 @@
     document.getElementById('ten').innerHTML = "Tên: " + name
     let arrQuestion = ["anh1.jpg", "anh2.jpg", "anh3.jpg", "anh4.jpg", "anh5.jpg", "anh6.jpg"];
     let arrAns = ["sóc trăng", "yếu ớt", "điếu cầy", "chó", "mắt lác", "óc chó"];
-    let arrAns2 = ['Con sóc và mặt trăng...', '2 quả ớt trông thế nào?',
-        'hút hít phê pha', 'gâu gâu', 'mắt anh làm sao thế', 'tên 1 loại quả']
+    let arrAns2 = ['Con sóc và mặt trăng có liên quan đến nhau không?', '2 quả ớt trông thế nào?',
+        'hút hít phê pha', 'gâu gâu', 'mắt anh làm sao thế?', 'tên 1 loại quả']
     let point = 0
     let index = 1
     let time = 20;
@@ -81,11 +81,14 @@
             point = point + 2
 
             document.getElementById("res2").innerHTML = "Điểm của bạn: " + point
-        } else
+        }
+        else
             alert("sai")
+
         point--
         document.getElementById("res2").innerHTML = "Điểm của bạn: " + point
         if (index == 5) {
+
             document.write('Tên: ' + name + "Điểm: " + point + ' ,Bạn đã thắng có muốn chơi lại không?'
                 + '<button style="font-size: 30px; ' +
                 'color: #008CBA;' +
@@ -93,13 +96,15 @@
                 'border: none; ' +
                 'background-color: #008CBA;' +
                 'text-decoration: white' +
-                ' "><a href="index.html">Chơi lại</a></button>')
+                ' "><a href="index.html">Chơi lại</a></button>' +
+                '<button style="font-size: 30px; color: #008CBA; border-radius: 15px;' +
+                'background-color: #008CBA; border: none;" ' +
+                '><a href="index3.html">Không!</a></button>')
 
         }
-        document.getElementById('res').innerHTML = "Câu trả lời là: " + answer
+        document.getElementById('res').innerHTML = "Câu trả lời của bạn là: " + answer
         time = 20
     }countdown()
-
 
     function audio() {
         document.getElementById('audio').play()
@@ -121,15 +126,27 @@
         point--
         document.getElementById("res2").innerHTML = "Điểm của bạn: " + point
         if (index == 7) {
+
             alert("hết rồi")
 
             document.write("<h3 style='text-align: center;'>Bỏ qua nhiều quá" +
-                "<h3  style='text-align: center'>" + "Người chơi: " + name + " ,Điểm của bạn " + point + "<br>" + "<br>" + "trò chơi kết thúc")
+                "<h3  style='text-align: center'>" + "Người chơi: " + name + " ,Điểm của bạn " + point + "<br>" +
+                "<br>" + "trò chơi kết thúc"+ "<br>" + '<button style="font-size: 30px; ' +
+                'color: #008CBA;' +
+                'border-radius: 15px;' +
+                'border: none; ' +
+                'background-color: #008CBA;' +
+                'text-decoration: white' +
+                ' "><a href="index.html">Chơi lại</a></button>' +
+                '<button style="font-size: 30px; color: #008CBA; border-radius: 15px;' +
+                'background-color: #008CBA; border: none;" ' +
+                '><a href="index3.html">Không!</a></button>')
         }
 
     }
     function countdown() {
         if (time == 0) {
+            document.getElementById('audio2').play()
             alert('hết giờ')
 
         } else {
