@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="css2.css">
     <!--  /* đổi font chữ */-->
 
-
 </head>
 <body>
 <h2 id="time"></h2>
-<audio id="audio" style="display: none" onmouseover="audio()" controls autoplay src="intro.mp3 "></audio>
+<audio id="audio" style="display: none" onmouseover="audio()"
+       controls autoplay src="intro.mp3 "></audio>
 <audio id="audio1" src="win2.mp3" style="display: none"></audio>
 <audio id="audio2" src="lose.mp3" style="display: none"></audio>
 
 <img src="anh1.jpg" id="anh1" style="text-align: center" alt="" width="400px" height="400px">
 
-    <label><input type="text" id="nhập" placeholder="Answer here" onfocus="this.value=''"></label>
-    <button id="but2"
-            style="color: white;
-        background-color: indigo;" onclick="check()">Kiểm tra</button>
+<label><input type="text" id="nhập" placeholder="Answer here" onfocus="this.value=''"></label>
+<button id="but2"
+        style="color: white;
+        background-color: indigo;"
+        onclick="check()">Kiểm tra
+</button>
 
-    <button id="but4" onclick="tips()" style="background-color: yellow;">Gợi ý</button>
+<button id="but4" onclick="tips()" style="background-color: yellow;">Gợi ý</button>
 
-    <button id="but6" onclick="changeImage()" style="background-color: #d00b0b;">Đổi câu hỏi</button>
+<button id="but6" onclick="changeImage()" style="background-color: #d00b0b;">Đổi câu hỏi</button>
 
 <h2 id="res"></h2>  <!--hiển thị điểm-->
 <h2 id="res2"></h2> <!--hiển thị câu trả lời-->
@@ -60,8 +62,7 @@
             point = point + 2
 
             document.getElementById("res2").innerHTML = "Điểm của bạn: " + point
-        }
-        else
+        } else
             // lỗi audio
             alert("sai")
 
@@ -70,8 +71,12 @@
 
         if (index == 5) {
 
-            document.write('Tên: ' + name + "Điểm: " + point + ' ,Bạn đã thắng có muốn chơi lại không?'
-                + '<button style="font-size: 30px; ' +
+            document.write("<h3 style='text-align: center;'>Bạn đã thắng" +
+                "<h3  style='text-align: center'>" + "Người chơi: " + name +
+                " ,Điểm của bạn " + point + "<br>" +
+                "<br>" + "Trò chơi kết thúc" + "<br>" +
+                "<br>" + "Bạn có muốn chơi lại không??" + "<br>" +
+                '<button style="font-size: 30px; ' +
                 'color: #008CBA;' +
                 'border-radius: 15px;' +
                 'border: none; ' +
@@ -80,12 +85,14 @@
                 ' "><a href="index.html">Chơi lại</a></button>' +
                 '<button style="font-size: 30px; color: #008CBA; border-radius: 15px;' +
                 'background-color: #008CBA; border: none;" ' +
-                '><a href="index3.html">Không!</a></button>')
+                '><a href="index3.html">Không chơi nữa đâu!</a></button>')
 
         }
         document.getElementById('res').innerHTML = "Câu trả lời của bạn là: " + answer
         time = 20
-    }countdown()
+    }
+
+    countdown()
 
     function audio() {
         document.getElementById('audio').play()
@@ -115,7 +122,8 @@
             document.write("<h3 style='text-align: center;'>Bỏ qua nhiều quá" +
                 "<h3  style='text-align: center'>" + "Người chơi: " + name +
                 " ,Điểm của bạn " + point + "<br>" +
-                "<br>" + "trò chơi kết thúc"+ "<br>" +
+                "<br>" + "Trò chơi kết thúc" + "<br>" +
+                "<br>" + "Bạn có muốn chơi lại không??" + "<br>" +
                 '<button style="font-size: 30px; ' +
                 'color: #008CBA;' +
                 'border-radius: 15px;' +
@@ -125,10 +133,11 @@
                 ' "><a href="index.html">Chơi lại</a></button>' +
                 '<button style="font-size: 30px; color: #008CBA; border-radius: 15px;' +
                 'background-color: #008CBA; border: none;" ' +
-                '><a href="index3.html">Không!</a></button>')
+                '><a href="index3.html">Không chơi nữa đâu!</a></button>')
         }
 
     }
+
     function countdown() {
         if (time === 0) {
             document.getElementById('audio2').play()
