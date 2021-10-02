@@ -1,0 +1,23 @@
+
+body {                         /* tất cả những thẻ ở trong phần body đều có thuộc tính ở dưới */
+    background-image: url("https://i.pinimg.com/originals/50/20/af/5020af9c53936ac7596855bc9bc3733b.gif");
+    text-align: center;        /* cho ra giữa nhưng ko hoạt động */
+    background-size: 100%;     /* độ phủ của ảnh nền */
+    color: white;              /* màu chữ button ở dưới bị lỗi nên để trên này*/
+
+
+}
+button {                           /* thuộc tính của botton*/
+    border: none;                  /* bỏ viền ngoài */
+    border-radius: 15px;           /* viền bo tròn */
+    padding: 10px 10px;
+    background-color: #008CBA;     /* màu nền ô button */
+    font-size:200px;               /* kích thước ô button */
+
+
+}
+p {
+    text-align: center;
+    color: greenyellow;
+    font-size: 30px;
+}

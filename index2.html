@@ -5,30 +5,9 @@
     <title>Title</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css2.css">
     <!--  /* đổi font chữ */-->
-    <style>
-        body {
-            background: #008CBA;
-            font-family: 'Roboto', sans-serif;
-            color: indigo;
-        }
 
-        button {
-            font-size:30px;
-            border-radius: 15px;
-            padding: 10px 10px;
-            border: none;
-        }
-
-        img {            /* chỉnh ảnh ra giữa màn hình */
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 15px;
-        }
-
-
-    </style>
 
 </head>
 <body>
@@ -83,10 +62,12 @@
             document.getElementById("res2").innerHTML = "Điểm của bạn: " + point
         }
         else
+            // lỗi audio
             alert("sai")
 
         point--
         document.getElementById("res2").innerHTML = "Điểm của bạn: " + point
+
         if (index == 5) {
 
             document.write('Tên: ' + name + "Điểm: " + point + ' ,Bạn đã thắng có muốn chơi lại không?'
@@ -115,7 +96,9 @@
         let srcSplit = question.src.split("/");
         let src = srcSplit[srcSplit.length - 1];
         let index = arrQuestion.indexOf(src);
-        document.getElementById('res').innerHTML = "<h3 style='text-align: right'>" + arrAns2[index] + "</h3>"
+        document.getElementById('res').innerHTML =
+            "<h3 style='text-align: right'>"
+            + arrAns2[index] + "</h3>"
     }
 
     function changeImage() {
@@ -130,8 +113,10 @@
             alert("hết rồi")
 
             document.write("<h3 style='text-align: center;'>Bỏ qua nhiều quá" +
-                "<h3  style='text-align: center'>" + "Người chơi: " + name + " ,Điểm của bạn " + point + "<br>" +
-                "<br>" + "trò chơi kết thúc"+ "<br>" + '<button style="font-size: 30px; ' +
+                "<h3  style='text-align: center'>" + "Người chơi: " + name +
+                " ,Điểm của bạn " + point + "<br>" +
+                "<br>" + "trò chơi kết thúc"+ "<br>" +
+                '<button style="font-size: 30px; ' +
                 'color: #008CBA;' +
                 'border-radius: 15px;' +
                 'border: none; ' +
@@ -145,7 +130,7 @@
 
     }
     function countdown() {
-        if (time == 0) {
+        if (time === 0) {
             document.getElementById('audio2').play()
             alert('hết giờ')
 

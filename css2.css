@@ -1,0 +1,20 @@
+body {
+    background: #008CBA;
+    font-family: 'Roboto', sans-serif;
+    color: indigo;
+}
+
+button {
+    font-size:30px;
+    border-radius: 15px;
+    padding: 10px 10px;
+    border: none;
+
+}
+
+img {            /* chỉnh ảnh ra giữa màn hình */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
