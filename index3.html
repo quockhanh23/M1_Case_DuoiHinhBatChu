@@ -22,13 +22,16 @@
     </style>
 
 <body>
-<audio style="display: none" controls autoplay src="intro.mp3"></audio>
+<audio id="audio2i3" style="display: none" controls autoplay src="sound/credit.mp3"></audio>
+<audio id="audio1i3" style="display: none" src="sound/cauca.mp3"></audio>
 
-<h3>credit </h3>
-<h3>chào mọi người</h3>
+
+<h3>Cedit </h3>
+<h3>Khánh</h3>
+<h3>Chào mọi người</h3>
 
 <h3><a style="text-decoration: none "
-       href="https://www.facebook.com/khanhgaquay/">V1.0.0.1 create by Khánh</a></h3>
+       href="https://www.facebook.com/khanhgaquay/">V1.0.0.1</a></h3>
 <h3><input type="checkbox" id="check1">1 + 1 = 2</h3>
 <h3><input type="checkbox" id="check2">Anh là ai?</h3>
 <h3><input type="checkbox" id="check3">Nhìn cũng được đấy</h3>
@@ -41,6 +44,7 @@ function oki() {
     document.getElementById('check2').disabled = true
     document.getElementById('check3').disabled = true
     document.getElementById("rss").innerHTML = "Cảm ơn và hẹn gặp lại !!"
+    document.getElementById('audio1i3').play()
 
 }
 </script>
