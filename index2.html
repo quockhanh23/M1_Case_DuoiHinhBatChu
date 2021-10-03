@@ -18,7 +18,9 @@
 
 <img src="anh1.jpg" id="anh1" style="text-align: center" alt="" width="400px" height="400px">
 
-<label><input type="text" id="nhập" placeholder="Answer here" onfocus="this.value=''"></label>
+<label><input type="text"
+              id="nhập" onclick="myFunction()" onmouseover="myFunction2()" onmouseout="myFunction()"
+              placeholder="Answer here" onfocus="this.value='' "></label>
 <button id="but2"
         style="color: white;
         background-color: indigo;"
@@ -42,10 +44,11 @@
     let arrQuestion = ["anh1.jpg", "anh2.jpg", "anh3.jpg", "anh4.jpg", "anh5.jpg", "anh6.jpg"];
     let arrAns = ["sóc trăng", "yếu ớt", "điếu cầy", "chó", "mắt lác", "óc chó"];
     let arrAns2 = ['Con sóc và mặt trăng có liên quan đến nhau không?', '2 quả ớt trông thế nào?',
-        'hút hít phê pha', 'gâu gâu', 'mắt anh làm sao thế?', 'tên 1 loại quả']
+        'hút hít phê pha', 'con gì sủa gâu gâu', 'mắt anh làm sao thế?', 'tên 1 loại quả (hạt) ,' +
+        ' hay được dùng để chửi người khác :v']
     let point = 0
     let index = 1
-    let time = 20;
+    let time = 30;
 
 
     function check() {
@@ -89,7 +92,7 @@
 
         }
         document.getElementById('res').innerHTML = "Câu trả lời của bạn là: " + answer
-        time = 20
+        time = 30
     }
 
     countdown()
@@ -109,7 +112,7 @@
     }
 
     function changeImage() {
-        time = 20
+        time = 30
 
         document.getElementById("anh1").src = arrQuestion[index]
         index++
@@ -148,6 +151,12 @@
             time--
             setTimeout(countdown, 1000)
         }
+    }
+    function myFunction() {
+        document.getElementById('nhập').style.background = "yellow";
+    }
+    function myFunction2() {
+        document.getElementById('nhập').style.background = "#9fd7ea";
     }
 
 </script>
