@@ -14,7 +14,7 @@ function myFunction() {
     document.getElementById('nhập5').style.background = "indigo";
     document.getElementById('nhập11').style.background = "blue";
     document.getElementById('nhập22').style.background = "#d55313";
-    document.getElementById('nhập33').style.background = "#110825";
+    document.getElementById('nhập33').style.background = "#180341";
     document.getElementById('nhập44').style.background = "yellow";
     document.getElementById('nhập55').style.background = "#a016b6";
 
@@ -32,4 +32,16 @@ function myFunction2() {
     document.getElementById('nhập44').style.background = "#dcc531";
     document.getElementById('nhập55').style.background = "#181717";
 
+}
+function myFunction3() {
+    document.getElementById('nhập1').style.background = "#b8b9cc";
+    document.getElementById('nhập2').style.background = "#5c3f64";
+    document.getElementById('nhập3').style.background = "#174cbb";
+    document.getElementById('nhập4').style.background = "#9b5130";
+    document.getElementById('nhập5').style.background = "#0efa2d";
+    document.getElementById('nhập11').style.background = "#869313";
+    document.getElementById('nhập22').style.background = "#5d0404";
+    document.getElementById('nhập33').style.background = "#b20e0e";
+    document.getElementById('nhập44').style.background = "#dcc531";
+    document.getElementById('nhập55').style.background = "#97c2f3";
 }

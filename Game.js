@@ -33,7 +33,7 @@ function check() {
 
     if (index == 5) {
 
-        document.write("<h3 style='text-align: center;'>Bạn đã thắng" +
+        document.write("<h3 style='text-align: center;background-color: #008CBA;'>Bạn đã thắng" +
             "<h3  style='text-align: center'>" + "Người chơi: " + name +
             " ,Điểm của bạn " + point + "<br>" +
             "<br>" + "Trò chơi kết thúc" + "<br>" +
@@ -54,7 +54,7 @@ function check() {
     time = 30
 }
 
-countdown()
+countdown()          // đổi tên là lỗi
 
 function audio() {
     document.getElementById('audio').play()
@@ -81,7 +81,7 @@ function changeImage() {
 
         alert("hết rồi")
 
-        document.write("<h3 style='text-align: center;'>Bỏ qua nhiều quá" +
+        document.write("<h3 style='text-align: center;background-color: #008CBA;'>Bỏ qua nhiều quá" +
             "<h3  style='text-align: center'>" + "Người chơi: " + name +
             " ,Điểm của bạn " + point + "<br>" +
             "<br>" + "Trò chơi kết thúc" + "<br>" +
@@ -100,7 +100,7 @@ function changeImage() {
 
 }
 
-function countdown() {
+function countdown() {    // Đổi tên là bị lỗi
     if (time === 0) {
         document.getElementById('audio2').play()
         alert('hết giờ')
