@@ -4,14 +4,12 @@ let arrQuestion = ["anh1.jpg", "anh2.jpg", "anh3.jpg", "anh4.jpg", "anh5.jpg", "
 let arrAns = ["sóc trăng", "yếu ớt", "điếu cầy", "chó", "mắt lác", "óc chó"];
 let arrAns2 = ['Con sóc và mặt trăng có liên quan đến nhau không?', '2 quả ớt trông thế nào?',
     'hút hít phê pha', 'con gì sủa gâu gâu', 'mắt anh làm sao thế?', 'tên 1 loại quả (hạt) ,' +
-    ' hay được dùng để chửi người khác :v']
+    ' hay được dùng để chửi người khác']
 let point = 0
 let index = 1
 let time = 30;
 
-
 function check() {
-
     let answer = document.getElementById("nhập").value;
     let question = document.getElementById("anh1");
     let srcSplit = question.src.split("/");
@@ -22,17 +20,13 @@ function check() {
         document.getElementById('audio1').play();  // dẫn id file nhạc vào đây
         question.src = arrQuestion[index + 1];
         point = point + 2
-
         document.getElementById("res2").innerHTML = "Điểm của bạn: " + point
     } else
-        // lỗi audio
         alert("sai")
-
     point--
     document.getElementById("res2").innerHTML = "Điểm của bạn: " + point
 
-    if (index == 5) {
-
+    if (index === 5) {
         document.write("<h3 style='text-align: center;background-color: #008CBA;'>Bạn đã thắng" +
             "<h3  style='text-align: center'>" + "Người chơi: " + name +
             " ,Điểm của bạn " + point + "<br>" +
@@ -48,7 +42,6 @@ function check() {
             '<button style="font-size: 30px; color: #008CBA; border-radius: 15px;' +
             'background-color: #008CBA; border: none;" ' +
             '><a href="index3.html">Không chơi nữa đâu!</a></button>')
-
     }
     document.getElementById('res').innerHTML = "Câu trả lời của bạn là: " + answer
     time = 30
@@ -72,15 +65,13 @@ function tips() {
 
 function changeImage() {
     time = 30
-
+    document.getElementById('res').innerHTML = ""
     document.getElementById("anh1").src = arrQuestion[index]
     index++
     point--
     document.getElementById("res2").innerHTML = "Điểm của bạn: " + point
-    if (index == 7) {
-
+    if (index > 6) {
         alert("hết rồi")
-
         document.write("<h3 style='text-align: center;background-color: #008CBA;'>Bỏ qua nhiều quá" +
             "<h3  style='text-align: center'>" + "Người chơi: " + name +
             " ,Điểm của bạn " + point + "<br>" +
@@ -99,11 +90,10 @@ function changeImage() {
     }
 }
 
-function countdown() {    // Đổi tên là bị lỗi
+function countdown() {
     if (time === 0) {
         document.getElementById('audio2').play()
         alert('hết giờ')
-
     } else {
         document.getElementById('time').innerHTML = time
         time--
