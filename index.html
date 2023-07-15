@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<button ><a style="text-decoration: white; color: white" href="index2.html">Bắt đầu</a></button>
+<button><a style="text-decoration: white; color: white" href="index2.html">Bắt đầu</a></button>
 <!--text-decoration: xóa gạch chân của thẻ a đang lỗi-->
 <div>
     <h1 style="color: indigo">Hướng dẫn chơi: </h1>
@@ -17,9 +17,17 @@
     <p>Ấn vào ô Gợi ý để hiển thị gợi ý</p>
     <p>Ấn vào Đổi câu hỏi để chuyển sang câu khác</p>
     <p>Tất cả chữ đều viết thường hết</p>
-    <h2>Tôi đã rõ luật chơi và không thắc mắc gì thêm<label><input type="checkbox"></label></h2>
+    <h2 onclick="newAlo()">Tôi đã rõ luật chơi và không thắc mắc gì thêm<label><input type="checkbox"></label></h2>
 
 </div>
 
 </body>
 </html>
+<script>
+    function newAlo() {
+        setTimeout(() => {
+            console.log('hello')
+        }, 0)
+        console.log('world')
+    }
+</script>

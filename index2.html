@@ -9,6 +9,12 @@
 
     <!--  /* đổi font chữ */-->
 
+    <style>
+        .cursor {
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
 <h2 id="time"></h2>
@@ -24,15 +30,15 @@
               style="padding: 8px 4px; border: 2px solid red; border-radius: 8px;"
               id="nhập" onclick="myFunction()" onmouseover="myFunction2()" onmouseout="myFunction()"
               placeholder="Answer here" onfocus="this.value='' "></label>
-<button id="but2"
+<button id="but2" class="cursor"
         style="color: white;
         background-color: indigo;"
         onclick="check()">Kiểm tra
 </button>
 
-<button id="but4" onclick="tips()" style="background-color: yellow;">Gợi ý</button>
+<button id="but4" class="cursor" onclick="tips()" style="background-color: yellow;">Gợi ý</button>
 
-<button id="but6" onclick="changeImage()" style="background-color: #d00b0b;">Đổi câu hỏi</button>
+<button id="but6" class="cursor" onclick="changeImage()" style="background-color: #d00b0b;">Đổi câu hỏi</button>
 
 <h2 id="res"></h2>  <!--hiển thị điểm-->
 <h2 id="res2"></h2> <!--hiển thị câu trả lời-->

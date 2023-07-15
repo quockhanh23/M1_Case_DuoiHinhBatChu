@@ -17,7 +17,7 @@ function check() {
     let srcSplit = question.src.split("/");
     let src = srcSplit[srcSplit.length - 1];
     let index = arrQuestion.indexOf(src);
-    if (answer == arrAns[index]) {
+    if (answer.toLowerCase() === arrAns[index].toLowerCase()) {
         alert("đúng")
         document.getElementById('audio1').play();  // dẫn id file nhạc vào đây
         question.src = arrQuestion[index + 1];
@@ -97,7 +97,6 @@ function changeImage() {
             'background-color: #008CBA; border: none;" ' +
             '><a href="index3.html">Không chơi nữa đâu!</a></button>')
     }
-
 }
 
 function countdown() {    // Đổi tên là bị lỗi
@@ -111,9 +110,11 @@ function countdown() {    // Đổi tên là bị lỗi
         setTimeout(countdown, 1000)
     }
 }
+
 function myFunction() {
     document.getElementById('nhập').style.background = "yellow";
 }
+
 function myFunction2() {
     document.getElementById('nhập').style.background = "#9fd7ea";
 }
